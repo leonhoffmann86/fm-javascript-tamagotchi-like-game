@@ -1,10 +1,8 @@
+import GAME_STATE from "./gameState";
+
 const TICK_RATE = 3000;
 
-function tick() {
-  console.log("Tick", Date.now());
-}
-
-function init() {
+async function init() {
   console.log("Starting Game");
 
   //Track next time to call tick(), which is st "now" when the ganme starts/inits
@@ -17,7 +15,7 @@ function init() {
     //Check if it is time to tick
     if (nextTimeToTick <= NOW) {
       //call tick()
-      tick();
+      GAME_STATE.tick();
       // Advance the clock by tick rate
       nextTimeToTick = NOW + TICK_RATE;
     }
