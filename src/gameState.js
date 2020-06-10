@@ -6,6 +6,9 @@ const GAME_STATE = {
     console.log("clock", this.clock);
     return this.clock;
   },
+  handleUserAction(icon) {
+    console.log(icon);
+  },
 };
 
 export default GAME_STATE;
